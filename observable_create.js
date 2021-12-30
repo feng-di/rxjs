@@ -10,7 +10,7 @@ function getData(){
         {name: "Sapporo", country: "Japan", price: 7.50}
     ];
 
-        
+
     return Observable.create( observer => {
 
               beers.forEach( beer => observer.next(beer));
@@ -22,7 +22,7 @@ function getData(){
 
 getData()
      .subscribe(
-         beer => console.log("Subscriber got " + beer.name),
-         error => console.err(error),
-            () => console.log("The stream is over")
+        beer => console.log("Subscriber got " + beer.name),
+        error => console.err(error),
+        () => console.log("The stream is over")
 );
